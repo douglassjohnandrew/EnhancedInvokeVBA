@@ -1,2 +1,2 @@
 # EnhancedInvokeVBA
-An enhancement to the Invoke VBA activity that adds detailed error handling
+This project is the culmination of my UiPath and VBA development work.
