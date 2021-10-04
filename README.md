@@ -28,7 +28,9 @@ How to write your VBA code files for this library:
 - Ensure that your "main" code is **not** inside a Function or Sub
 - Create helper functions and subs if needed
 
-As a simple example, suppose you want to pass two integers from UiPath to VBA and display their sum in a VBA message box. Your code file could look like this:
+As a simple example, suppose you want to pass two integers from UiPath to VBA and display their sum in a VBA message box.
+
+You could create the following code file **(MessageBoxDemo.vb)**
 
 ```vb
 ' A helper sub that displays the sum of two numbers in a VBA message box
@@ -36,7 +38,7 @@ Sub DisplaySum(n1 As Integer, n2 As Integer)
 Msgbox("The sum of " & n1 & " and " & n2 & " is " & (n1+n2))
 End Sub
 
-' This main code calls DisplaySum two times. Note that this main code is not inside a Function or Sub
+' The main code calls DisplaySum two times. Note that this main code is not inside a Function or Sub.
 ' num1 and num2 are Integer variables that store the two integers passed from UiPath
 DisplaySum(num1, num2)
 DisplaySum(num1 - 1, num2 - 1)
@@ -44,7 +46,7 @@ DisplaySum(num1 - 1, num2 - 1)
 
 First, set the EntryMethodParameterDefs argument to be **"num1 As Integer, num2 As Integer"**
 
-Then, the enhanced code file that the library creates will look like this:
+Then, the library will create an enhanced code file (named MessageBoxDemo-Enhanced.vb) that looks like this:
 
 ```vb
 ' Helper functions and subs are moved to the top of this file, outside the Main function
@@ -59,7 +61,7 @@ Function Main(num1 As Integer, num2 As Integer) As String
 On Error GoTo Handle
 Main = ""
     
-' The main code is placed here, with line numbers added
+' The main code is placed here, with line numbers automatically added
 1 Call DisplaySum(num1, num2)
 2 Call DisplaySum(num1 - 1, num2 - 1)
     
@@ -69,7 +71,7 @@ Exit Function
 Handle:
 
 ' Return the VBA error string to UiPath
-Main = "VBA failed during execution. Error Num: " & Err.Number & ", Line Num: " _
+Main = "MessageBoxDemo-Enhanced.vb failed during execution. Error Num: " & Err.Number & ", Line Num: " _
     & Erl & ", Source: " & Err.Source & ", Description: " & Err.Description
 
 End Function
