@@ -53,7 +53,7 @@ Msgbox("The sum of " & n1 & " and " & n2 & " is " & (n1+n2))
 End Sub
 
 ' This Main function is created by the library, and then executed in UiPath
-Function Main(num1 As String, num2 As String) As String
+Function Main(num1 As Integer, num2 As Integer) As String
 
 ' If Main throws an error, it will be handled
 On Error GoTo Handle
