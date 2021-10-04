@@ -60,8 +60,8 @@ On Error GoTo Handle
 Main = ""
     
 ' The main code is placed here, with line numbers added
-1 DisplaySum(num1, num2)
-2 DisplaySum(num1 - 1, num2 - 1)
+1 Call DisplaySum(num1, num2)
+2 Call DisplaySum(num1 - 1, num2 - 1)
     
 ' ThisWorkbook.Save will be added here if SaveChanges is set to True
 Exit Function
