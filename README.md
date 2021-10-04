@@ -75,4 +75,4 @@ Main = "VBA failed during execution. Error Num: " & Err.Number & ", Line Num: " 
 End Function
 ```
 
-After this enhanced code file is created, UiPath executes this code within the specified Excel file. If a VBA error occurs, then the library throws this error in UiPath as a system exception.
+After this enhanced code file is created, UiPath executes the Main function within the specified Excel file. If a VBA error occurs, then the library throws this error in UiPath as a system exception.
