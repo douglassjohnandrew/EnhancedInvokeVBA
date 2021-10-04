@@ -46,7 +46,7 @@ DisplaySum(num1 - 1, num2 - 1)
 
 First, set the EntryMethodParameterDefs argument to be **"num1 As Integer, num2 As Integer"**
 
-Then, the library will create an enhanced code file (named MessageBoxDemo-Enhanced.vb) that looks like this:
+Then, the library will create an enhanced code file **(MessageBoxDemo-Enhanced.vb)** that looks like this:
 
 ```vb
 ' Helper functions and subs are moved to the top of this file, outside the Main function
