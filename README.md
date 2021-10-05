@@ -14,7 +14,7 @@ Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **EntryMethodParameterValues** - A collection of values to be passed as entry method parameters. For example, {"Paul Smith", 37}
 - **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file where VBA code runs
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
-- **SaveChanges** - If True, then save the Excel file after VBA finishes (using ThisWorkbook.Save). If False, then the Excel file is not saved
+- **SaveChanges** - If True, then save the Excel file after VBA finishes. If False, then the Excel file is not saved
 - **Visible** - If True, then the Excel file is visible as VBA runs. If False, then the Excel file is not shown
 
 Other notes about this library:
@@ -60,12 +60,11 @@ Function Main(num1 As Integer, num2 As Integer) As String
 ' If Main throws an error, it will be handled
 On Error GoTo Handle
 Main = ""
-    
+
 ' The main code is placed here, with line numbers automatically added
 1 Call DisplaySum(num1, num2)
 2 Call DisplaySum(num1 - 1, num2 - 1)
-    
-' ThisWorkbook.Save will be added here if SaveChanges is set to True
+
 Exit Function
 
 Handle:
