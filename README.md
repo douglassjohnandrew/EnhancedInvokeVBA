@@ -1,8 +1,6 @@
 # EnhancedInvokeVBA
 This project is the culmination of my UiPath and VBA development work.
 
-The UiPath VBA Guide is a tutorial / best practices document for using VBA with UiPath. This guide was the inspiration for creating the EnhancedInvokeVBA library.
-
 The EnhancedInvokeVBA library is an enhancement of the existing Invoke VBA activity, with the following improvements:
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
 - Automatically adds line numbers so you can see exactly where errors occur
