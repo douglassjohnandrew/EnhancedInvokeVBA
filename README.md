@@ -3,7 +3,7 @@ This project is the culmination of my UiPath and VBA development work.
 
 The EnhancedInvokeVBA library is an enhancement of the existing Invoke VBA activity, with the following improvements:
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
-- Automatically adds line numbers so you can see exactly where errors occur
+- Error information is detailed, including the exact line that failed
 
 Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
@@ -68,8 +68,7 @@ Exit Function
 Handle:
 
 ' Return the VBA error string to UiPath
-Main = "MessageBoxDemo-Enhanced.vb failed during execution. Error Num: " & Err.Number & ", Line Num: " _
-    & Erl & ", Source: " & Err.Source & ", Description: " & Err.Description
+Main = Erl & ";" & Err.Description & ";" & Err.Number & ";" & Err.Source
 
 End Function
 ```
