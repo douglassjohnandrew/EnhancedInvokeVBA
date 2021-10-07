@@ -38,8 +38,8 @@ End Sub
 
 ' The main code calls DisplaySum two times. Note that this main code is not inside a Function or Sub.
 ' num1 and num2 are Integer variables that store the two integers passed from UiPath
-DisplaySum(num1, num2)
-DisplaySum(num1 - 1, num2 - 1)
+Call DisplaySum(num1, num2)
+Call DisplaySum(num1 - 1, num2 - 1)
 ```
 
 First, set the EntryMethodParameterDefs argument to be **"num1 As Integer, num2 As Integer"**
