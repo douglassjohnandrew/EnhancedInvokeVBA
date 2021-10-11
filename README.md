@@ -36,7 +36,7 @@ Sub DisplaySum(n1 As Integer, n2 As Integer)
 Msgbox("The sum of " & n1 & " and " & n2 & " is " & (n1+n2))
 End Sub
 
-' The main code calls DisplaySum two times. Note that this main code is not inside a Function or Sub.
+' The main code calls DisplaySum two times. Note that this main code is NOT inside a Function or Sub.
 ' num1 and num2 are Integer variables that store the two integers passed from UiPath
 Call DisplaySum(num1, num2)
 Call DisplaySum(num1 - 1, num2 - 1)
