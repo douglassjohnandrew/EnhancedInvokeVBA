@@ -3,7 +3,7 @@ The EnhancedInvokeVBA library is an enhancement of the existing Invoke VBA activ
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
 - Returns detailed error information, including the exact line that failed
 
-Arguments: (required arguments are marked by :triangular_flag_on_post:)
+Input Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
 - **EntryMethodParameterDefs** - A comma-separated string of entry method parameter definitions. For example, "name As String, age As Integer"
@@ -51,11 +51,10 @@ Msgbox("The sum of " & n1 & " and " & n2 & " is " & (n1+n2))
 End Sub
 
 ' This Main function is created by the library, and then executed in UiPath
-Function Main(num1 As Integer, num2 As Integer) As String
+Function Main(num1 As Integer, num2 As Integer)
 
 ' If Main throws an error, it will be handled
 On Error GoTo Handle
-Main = ""
 
 ' The main code is placed here, with line numbers automatically added
 1 Call DisplaySum(num1, num2)
@@ -66,9 +65,15 @@ Exit Function
 Handle:
 
 ' Return the VBA error string to UiPath
-Main = Erl & ";" & Err.Description & ";" & Err.Number & ";" & Err.Source
+Dim errorArr(4) As String
+errorArr(0) = "Error Occurred"
+errorArr(1) = Erl
+errorArr(2) = Err.Description
+errorArr(3) = Err.Number
+errorArr(4) = Err.Source
+Main = errorArr
 
 End Function
 ```
 
-After this enhanced code file is created, UiPath executes the Main function within the specified Excel file. If a VBA error occurs, then the library throws this error in UiPath as a system exception.
+After this enhanced code file is created, UiPath executes the enhanced Main function within the specified Excel file. If a VBA error occurs, UiPath receives the error information and throws a system exception.
