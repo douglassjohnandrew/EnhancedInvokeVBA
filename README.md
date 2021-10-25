@@ -1,7 +1,7 @@
 # EnhancedInvokeVBA
 This library is an enhancement of the existing Invoke VBA activity, with the following improvements:
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
-- Returns detailed error information, including the exact line that failed
+- If VBA error occurs, returns detailed error information, including the exact line that failed
 
 Input Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
