@@ -6,8 +6,8 @@ This library is an enhancement of the existing Invoke VBA activity, with the fol
 Input Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
-- **EntryMethodParameterDefs** - A comma-separated string of entry method parameter definitions. Example: "name As String, age As Integer"
-- **EntryMethodParameterValues** - A collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
+- **EntryMethodParameterDefs** - Comma-separated string of entry method parameter definitions. Example: "name As String, age As Integer"
+- **EntryMethodParameterValues** - Collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
 - **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file where VBA code runs
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
 - **SaveChanges** - If True, then save the Excel file after VBA finishes. If False, then the Excel file is not saved
