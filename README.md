@@ -1,5 +1,5 @@
 # EnhancedInvokeVBA
-The EnhancedInvokeVBA library is an enhancement of the existing Invoke VBA activity, with the following improvements:
+This library is an enhancement of the existing Invoke VBA activity, with the following improvements:
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
 - Returns detailed error information, including the exact line that failed
 
