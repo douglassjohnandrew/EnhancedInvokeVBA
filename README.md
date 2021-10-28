@@ -11,7 +11,7 @@ Input Arguments: (required arguments are marked by :triangular_flag_on_post:)
 - **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file where VBA code runs
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
 - **SaveChanges** - If True, then save the Excel file after VBA finishes. If False, then the Excel file is not saved
-- **Visible** - If True, then the Excel file is visible as VBA runs. If False, then the Excel file is not shown (recommended)
+- **Visible** - If True, then Excel file is visible as VBA runs. If False, then Excel file is not shown (recommended)
 
 Other notes about this library:
 - CodeFilePath and ExcelFilePath need to be **full** paths (using Directory.GetCurrentDirectory)
