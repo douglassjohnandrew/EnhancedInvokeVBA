@@ -4,12 +4,13 @@ This library is an enhancement of the existing Invoke VBA activity, with the fol
 - If a VBA error occurs, returns detailed error information, including the exact line that failed
 
 EnhancedInvokeVBA arguments: (required arguments marked by :triangular_flag_on_post:)
-- **CloseWhenDone** - If True, then close the workbook after VBA finishes. If False, leave the workbook open
+- **CloseWorkbook** - If True, then close the workbook after VBA finishes. If False, leave the workbook open
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
 - **EntryMethodParameterDefs** - Comma-separated string of entry method parameter definitions. Example: "name As String, age As Integer"
 - **EntryMethodParameterValues** - Collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
 - **OutputValue** - The entry method's return value (optional)
-- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run. This variable can be created using the CreateWorkbookVariable activity:
+- **SaveChanges** - If True, then save the changes after VBA finishes. If False, do not save the changes
+- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run. This variable can be created using the CreateWorkbookVariable activity
 
 CreateWorkbookVariable arguments: (required arguments marked by :triangular_flag_on_post:)
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
