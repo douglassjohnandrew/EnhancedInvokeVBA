@@ -3,17 +3,15 @@ This library is an enhancement of the existing Invoke VBA activity, with the fol
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
 - If a VBA error occurs, returns detailed error information, including the exact line that failed
 
-Arguments: (required arguments marked by :triangular_flag_on_post:)
+EnhancedInvokeVBA arguments: (required arguments marked by :triangular_flag_on_post:)
 - **CloseWhenDone** - If True, then close the workbook after VBA finishes. If False, leave the workbook open
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
 - **EntryMethodParameterDefs** - Comma-separated string of entry method parameter definitions. Example: "name As String, age As Integer"
 - **EntryMethodParameterValues** - Collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
 - **OutputValue** - The entry method's return value (optional)
-- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run
+- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run. This variable can be created using the CreateWorkbookVariable activity:
 
-Since EnhancedInvokeVBA requires a WorkbookApplication variable, this package also has a CreateWorkbookVariable activity:
-
-Arguments: (required arguments marked by :triangular_flag_on_post:)
+CreateWorkbookVariable arguments: (required arguments marked by :triangular_flag_on_post:)
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
 - **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
