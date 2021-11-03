@@ -3,15 +3,22 @@ This library is an enhancement of the existing Invoke VBA activity, with the fol
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
 - If a VBA error occurs, returns detailed error information, including the exact line that failed
 
-Input Arguments: (required arguments are marked by :triangular_flag_on_post:)
+Arguments: (required arguments marked by :triangular_flag_on_post:)
+- **CloseWhenDone** - If True, then close the workbook after VBA finishes. If False, leave the workbook open
 - **CodeFilePath** :triangular_flag_on_post: - Full path to the file containing VBA code
-- **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
 - **EntryMethodParameterDefs** - Comma-separated string of entry method parameter definitions. Example: "name As String, age As Integer"
 - **EntryMethodParameterValues** - Collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
-- **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file where VBA code runs
+- **OutputValue** - The entry method's return value (optional)
+- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run
+
+Since EnhancedInvokeVBA requires a WorkbookApplication variable, this package also has a CreateWorkbookVariable activity:
+
+Arguments: (required arguments marked by :triangular_flag_on_post:)
+- **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
+- **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
-- **SaveChanges** - If True, then save the Excel file after VBA finishes. If False, then the Excel file is not saved
-- **Visible** - If True, then Excel file is visible as VBA runs. If False, then Excel file is not shown (recommended)
+- **Visible** - If True, then the Excel file will be visible. If False, then the Excel file is not shown (recommended)
+- **WorkbookObject** :triangular_flag_on_post: - The WorkbookApplication variable for later use
 
 Other notes about this library:
 - CodeFilePath and ExcelFilePath need to be **full** paths (using Directory.GetCurrentDirectory)
