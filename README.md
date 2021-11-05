@@ -10,14 +10,14 @@ EnhancedInvokeVBA arguments: (required arguments marked by :triangular_flag_on_p
 - **EntryMethodParameterValues** - Collection of values to be passed as entry method parameters. Example: {"Paul Smith", 37}
 - **OutputValue** - The entry method's return value (optional)
 - **SaveChanges** - If True, then save the changes after VBA finishes. If False, do not save the changes
-- **WorkbookObject** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run. This variable can be created using the CreateWorkbookVariable activity
+- **WorkbookVariable** :triangular_flag_on_post: - An existing WorkbookApplication variable where the VBA will run. This variable can be created using the CreateWorkbookVariable activity
 
 CreateWorkbookVariable arguments: (required arguments marked by :triangular_flag_on_post:)
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
 - **ExcelFilePath** :triangular_flag_on_post: - Full path to the Excel file
 - **OpenReadOnly** - If True, then open the Excel file in read-only mode. If False, then open the Excel file normally
 - **Visible** - If True, then the Excel file will be visible. If False, then the Excel file is not shown (recommended)
-- **WorkbookObject** :triangular_flag_on_post: - The WorkbookApplication variable for later use
+- **WorkbookVariable** :triangular_flag_on_post: - The WorkbookApplication variable for later use
 
 Other notes about this library:
 - CodeFilePath and ExcelFilePath need to be **full** paths (using Directory.GetCurrentDirectory)
