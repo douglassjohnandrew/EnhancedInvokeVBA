@@ -72,7 +72,7 @@ Exit Function
 
 Handle:
 
-' Return the VBA error string to UiPath
+' Return the VBA error information to UiPath
 Dim errorArr(4) As String
 errorArr(0) = "Error Occurred"
 errorArr(1) = Erl
