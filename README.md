@@ -1,7 +1,7 @@
 # EnhancedInvokeVBA
 This library is an enhancement of the existing Invoke VBA activity, with the following improvements:
 - Creates and invokes an enhanced version of your VBA code file that includes error handling
-- If a VBA error occurs, returns detailed error information, including the exact line that failed
+- If a VBA error occurs, returns detailed error information to UiPath, including the exact line that failed
 
 CreateWorkbookVariable arguments: (required arguments marked by :triangular_flag_on_post:)
 - **CreateNew** - If the ExcelFilePath does not exist, then True - Create the Excel file, or False - Throw an error
