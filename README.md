@@ -62,18 +62,20 @@ End Sub
 ' This Main function is created by the library, and then executed in UiPath
 Function Main(num1 As Integer, num2 As Integer)
 
-' If Main throws an error, it will be handled
+' If the main code throws an error, go to Handle
 On Error GoTo Handle
 
-' The main code is placed here, with line numbers automatically added
+' Main code is placed here, with line numbers automatically added
 1 Call DisplaySum(num1, num2)
 2 Call DisplaySum(num1 - 1, num2 - 1)
 
+' If the main code succeeded, then stop here
 Exit Function
 
+' If the main code failed somewhere, handle the error here
 Handle:
 
-' Return the VBA error information to UiPath
+' Retrieve the VBA error information and return it to UiPath
 Dim errorArr(4) As String
 errorArr(0) = "Error Occurred"
 errorArr(1) = Erl
